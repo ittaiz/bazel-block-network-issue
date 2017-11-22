@@ -16,6 +16,7 @@ java_test(
     ],
     data = [
         "@mysql_5.7_latest//:binary",
+        "@mysql_default_version//:binary",
     ],
-    jvm_flags = ["-Djava.io.tmpdir=/tmp", "-Dexample.custom.mysql.cache.dir=$(location @mysql_5.7_latest//:binary)"],
+    jvm_flags = ["-Djava.io.tmpdir=/tmp", "-Dexample.custom.mysql.version=$(location @mysql_5.7_latest//:binary)"],
 )
